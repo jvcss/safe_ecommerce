@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Center(
                     //    widthFactor: c,
                     child: ListTile(
-                      title: Text('Titulo',textAlign: TextAlign.center,),
+                      title: Text('Titulo $colIndex',textAlign: TextAlign.center,),
                       subtitle: Text('Descrição.',textAlign: TextAlign.center,),
                     ),
                   ),
@@ -107,42 +107,6 @@ class _MyHomePageState extends State<MyHomePage> {
     ).toList();
 
     return Scaffold(
-      // appBar: AppBar(
-      //    backgroundColor: Colors.transparent,
-      //
-      //   title: appLogo,
-      //   actions: <Widget>[
-      //     Row(
-      //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //       crossAxisAlignment: CrossAxisAlignment.start,
-      //       children: [
-      //         IconButton(
-      //           icon: const Icon(Icons.place_outlined),
-      //           tooltip: 'Localização',
-      //           onPressed: () {
-      //             openLocation(context);
-      //           },
-      //         ),
-      //         IconButton(
-      //           icon: const Icon(Icons.article_outlined),
-      //           tooltip: 'Detalhes',
-      //           onPressed: () {
-      //             openDetails(context);
-      //           },
-      //         ),
-      //         IconButton(
-      //           icon: const Icon(Icons.amp_stories_outlined),
-      //           tooltip: 'Galeria',
-      //           onPressed: () {
-      //             openGallery(context);
-      //           },
-      //         ),
-      //       ],
-      //     ),
-      //   ],
-      // ),
-
-
 
       body:
       Container(
@@ -190,22 +154,28 @@ class _MyHomePageState extends State<MyHomePage> {
                     ResponsiveCol(
                         children: [
                           Container(
-                            height: 480,
+                            height: 360,
+                            margin: EdgeInsets.symmetric(horizontal: 30),
                             width: mediaQueryData.size.width,
                             child: Card(
-                              elevation: 7,
+                              elevation: 20,
                               shadowColor: Colors.deepPurpleAccent,
                               color: Colors.transparent,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  const ListTile(
-                                    title: Text('Titulo'),
-                                    subtitle: Text('Descrição.'),
-                                  ),
-                                ],
-
+                              shape:  RoundedRectangleBorder(
+                                side: BorderSide(color: Colors.deepPurple, width: 0.1),
+                                borderRadius: BorderRadius.circular(30),
                               ),
+                              child: Align(
+                                alignment: Alignment.topCenter,
+                                //    widthFactor: c,
+
+                                child: ListTile(
+
+                                  title: Text('Titulo ',textAlign: TextAlign.center,),
+                                  subtitle: Text('Descrição.',textAlign: TextAlign.center,),
+                                ),
+                              ),
+
                             ),
                           ),
 
@@ -218,6 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       responsiveGridExampe
                   )
               ),
+
               Spacer(),
 
               Row(
