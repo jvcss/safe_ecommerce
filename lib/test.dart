@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:tio_bob_site/main.dart';
 import 'package:flutter_responsive/flutter_responsive.dart';
 import 'package:flutter_jsx/flutter_jsx.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
   @override
   _MyApp createState() => _MyApp();
 }
-class _MyApp extends State<MyApp> {
 
+class _MyApp extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,7 +28,6 @@ class _MyApp extends State<MyApp> {
   }
 }
 
-
 //TODO HOME
 //#region
 
@@ -37,7 +37,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePage extends State<HomePage> {
-
   @override
   void initState() {
     super.initState();
@@ -47,29 +46,21 @@ class _HomePage extends State<HomePage> {
   Widget build(BuildContext context) {
     ThemeData themeData = Theme.of(context);
     MediaQueryData mediaQueryData = MediaQuery.of(context);
-    /*create 12 columns*/
-    List<Widget> responsiveGridExampe =
 
-    /*repeat 12 times*/
-
-
-    List<int>.generate(4, (index) => index).map((colIndex) =>
-        ResponsiveCol(
-            padding: EdgeInsets.all(10),
-            gridSizes: {
-              ScreenSize.xl : 3,
-            },
-            children: [
+    List<Widget> responsiveGridExampe = List<int>.generate(4, (index) => index)
+        .map((colIndex) =>
+            ResponsiveCol(padding: EdgeInsets.all(10), gridSizes: {
+              ScreenSize.xl: 3,
+            }, children: [
               Container(
                 height: 360,
                 width: mediaQueryData.size.width,
-
                 child: Card(
                   borderOnForeground: false,
                   shadowColor: Colors.deepPurpleAccent,
                   color: Colors.transparent,
                   elevation: 7,
-                  shape:  RoundedRectangleBorder(
+                  shape: RoundedRectangleBorder(
                     side: BorderSide(color: Colors.white70, width: 1),
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -82,23 +73,21 @@ class _HomePage extends State<HomePage> {
                         subtitle: Text('Descrição.'),
                       ),
                     ],
-
                   ),
                 ),
               ),
-            ]
-        )
-    ).toList();
-
-   //
-
+            ]))
+        .toList();
 
     return Scaffold(
+      body:
 
-        body: Container( //background
+        Container( //background
           width: mediaQueryData.size.width,
           height: mediaQueryData.size.height,
-          child:  SingleChildScrollView(
+          child:
+
+          SingleChildScrollView(
                   child: ResponsiveContainer(
 
                      maxWidth: double.infinity,//media
@@ -189,10 +178,8 @@ class _HomePage extends State<HomePage> {
                     ],
                   )
               ),
+        ),
 
-
-
-        )
     );
   }
 }
