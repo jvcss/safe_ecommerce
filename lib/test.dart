@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tio_bob_site/main.dart';
 import 'package:flutter_responsive/flutter_responsive.dart';
-import 'package:flutter_jsx/flutter_jsx.dart';
 
 void main() => runApp(MyApp());
 
@@ -44,7 +42,6 @@ class _HomePage extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    ThemeData themeData = Theme.of(context);
     MediaQueryData mediaQueryData = MediaQuery.of(context);
 
     List<Widget> responsiveGridExampe = List<int>.generate(4, (index) => index)

@@ -1,6 +1,6 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
-import 'dart:math';
+//import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +10,6 @@ import 'package:tio_bob_site/style.dart';
 import 'package:tio_bob_site/gallery.dart';
 import 'package:tio_bob_site/backgrounding.dart';
 
-import 'package:flutter_jsx/flutter_jsx.dart';
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 
@@ -64,7 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
 
-    ThemeData themeData = Theme.of(context);
     MediaQueryData mediaQueryData = MediaQuery.of(context);
     /*create 12 columns*/
     List<Widget> responsiveGridExampe =
